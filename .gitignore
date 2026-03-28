@@ -1,0 +1,17 @@
+node_modules/
+.next/
+venv/
+ai-env/
+__pycache__/
+outputs/
+models/
+comfyui/
+assets/
+*.mp4
+*.mov
+*.png
+*.jpg
+*.jpeg
+*.zip
+.env
+.DS_Store

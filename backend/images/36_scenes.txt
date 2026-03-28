@@ -1,0 +1,7 @@
+file '/Users/muhammadfahad/AutoReelFactory/backend/images/36_scene_1.jpg'
+duration 3
+file '/Users/muhammadfahad/AutoReelFactory/backend/images/36_scene_2.jpg'
+duration 3
+file '/Users/muhammadfahad/AutoReelFactory/backend/images/36_scene_3.jpg'
+duration 3
+file '/Users/muhammadfahad/AutoReelFactory/backend/images/36_scene_3.jpg'

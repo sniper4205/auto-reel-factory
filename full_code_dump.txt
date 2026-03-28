@@ -1,0 +1,1129 @@
+===== FILE TREE =====
+ai/face_swap.py
+ai/generate_image.py
+ai/generate_image_backup.py
+ai/generate_voice.py
+ai/models/lora/alt_lora.safetensors
+ai/models/lora/realistic_lora.safetensors
+ai/validate_image.py
+backend/.DS_Store
+backend/.env
+backend/apiServer.js
+backend/assetSelector.js
+backend/audio/10.aiff
+backend/audio/10.mp3
+backend/audio/11.aiff
+backend/audio/11.mp3
+backend/audio/12.aiff
+backend/audio/12.mp3
+backend/audio/13.aiff
+backend/audio/13.mp3
+backend/audio/14.aiff
+backend/audio/14.mp3
+backend/audio/15.aiff
+backend/audio/15.mp3
+backend/audio/16.aiff
+backend/audio/16.mp3
+backend/audio/17.aiff
+backend/audio/17.mp3
+backend/audio/18.aiff
+backend/audio/18.mp3
+backend/audio/19.aiff
+backend/audio/19.mp3
+backend/audio/20.aiff
+backend/audio/20.mp3
+backend/audio/21.aiff
+backend/audio/21.mp3
+backend/audio/22.aiff
+backend/audio/22.mp3
+backend/audio/36.aiff
+backend/audio/36.mp3
+backend/audio/38.aiff
+backend/audio/38.mp3
+backend/audio/7.aiff
+backend/audio/7.mp3
+backend/audio/8.aiff
+backend/audio/8.mp3
+backend/audio/9.aiff
+backend/audio/9.mp3
+backend/audio/test.aiff
+backend/audio/test.mp3
+backend/autoReelGenerator.js
+backend/buildScenes.js
+backend/characters/characterEngine.js
+backend/characters/characterIdentityEngine.js
+backend/characters/characterMemory.js
+backend/engines/assetMemoryEngine.js
+backend/engines/batchReelGenerator.js
+backend/engines/characterDNA.js
+backend/engines/characterEngine.js
+backend/engines/characterGenerator.js
+backend/engines/characterRegistry.js
+backend/engines/cinematicPromptEngine.js
+backend/engines/contentEngine.js
+backend/engines/dialogueEngine.js
+backend/engines/motionEngine.js
+backend/engines/multiShotEngine.js
+backend/engines/musicEngine.js
+backend/engines/ollamaPromptEngine.js
+backend/engines/previewGenerator.js
+backend/engines/promptBuilder.js
+backend/engines/reelComposer.js
+backend/engines/reelDirector.js
+backend/engines/sceneComplexityRouter.js
+backend/engines/sceneDirector.js
+backend/engines/scriptGenerator.js
+backend/engines/smartImageGenerator.js
+backend/engines/smartShotDirector.js
+backend/engines/storyExpander.js
+backend/engines/storyGraphEngine.js
+backend/engines/styleEngine.js
+backend/engines/styleProfiles.js
+backend/engines/styleRouter.js
+backend/engines/subtitleEngine.js
+backend/engines/subtitleGenerator.js
+backend/engines/timelineBuilder.js
+backend/engines/timelineBuilder.js]
+backend/engines/visualBrain.js
+backend/engines/visualGenerator.js
+backend/engines/visualVarietyEngine.js
+backend/engines/voiceEngine.js
+backend/engines/voiceGenerator.js
+backend/engines/wizardEngine.js
+backend/fonts/font.ttf
+backend/fonts/test.png
+backend/generateImages.js
+backend/generate_image.py
+backend/images/10.png
+backend/images/11.png
+backend/images/15.png
+backend/images/16.png
+backend/images/17_subtitle.png
+backend/images/17_title.png
+backend/images/18_title.png
+backend/images/19_title.png
+backend/images/20_title.png
+backend/images/21_title.png
+backend/images/22_title.png
+backend/images/36_scene_1.jpg
+backend/images/36_scene_2.jpg
+backend/images/36_scene_3.jpg
+backend/images/36_scenes.txt
+backend/images/scene_1.jpg
+backend/images/scene_2.jpg
+backend/images/scene_3.jpg
+backend/package-lock.json
+backend/package.json
+backend/promptBuilder.js
+backend/public/index.html
+backend/runAutoReelApp.js
+backend/runPipeline.js
+backend/server.js
+backend/smartImageGen.js
+backend/stock/aiImageGenerator.js
+backend/stock/assetImporter.js
+backend/stock/assetMover.js
+backend/stock/assetProcessor.js
+backend/stock/assetSelector.js
+backend/stock/autoReelGenerator.js
+backend/stock/characterEngine.js
+backend/stock/characterManager.js
+backend/stock/cinematicShotPlanner.js
+backend/stock/duplicateDetector.js
+backend/stock/finalAssembler.js
+backend/stock/folderSetup.js
+backend/stock/inboxScanner.js
+backend/stock/metadataStore.js
+backend/stock/motionEngine.js
+backend/stock/musicMixer.js
+backend/stock/previewGenerator.js
+backend/stock/promptBuilder.js
+backend/stock/sceneAnalyzer.js
+backend/stock/sceneAssetIntegrator.js
+backend/stock/sceneComplexityRouter.js
+backend/stock/sceneDirector.js
+backend/stock/sceneMerger.js
+backend/stock/sceneRenderer.js
+backend/stock/sceneSplitter.js
+backend/stock/scriptGenerator.js
+backend/stock/shotPlanner.js
+backend/stock/smartShotDirector.js
+backend/stock/stockDownloader.js
+backend/stock/styleEngine.js
+backend/stock/thumbnailGenerator.js
+backend/stock/visualBrain.js
+backend/stock/visualGenerator.js
+backend/stock/visualRouter.js
+backend/stock/voiceoverGenerator.js
+backend/testAutoReelApp.js
+backend/testBatchGenerator.js
+backend/testFullPipeline.js
+backend/testMotionEngine.js
+backend/testPromptRouterIntegration.js
+backend/testReelComposer.js
+backend/testSceneComplexityRouter.js
+backend/testSceneRenderer.js
+backend/testScriptGenerator.js
+backend/testStoryGraph.js
+backend/testStyleEngine.js
+backend/testSubtitleEngine.js
+backend/testVoiceEngine.js
+backend/testWizard.js
+backend/validators/promptSchema.js
+backend/validators/sceneSchema.js
+backend/videos/10.mp4
+backend/videos/11.mp4
+backend/videos/15.mp4
+backend/videos/16.mp4
+backend/videos/17.mp4
+backend/videos/18.mp4
+backend/videos/19.mp4
+backend/videos/20.mp4
+backend/videos/21.mp4
+backend/videos/22.mp4
+backend/videos/36.mp4
+backend/videos/36_temp.mp4
+backend/videos/6.mp4
+backend/videos/7.mp4
+
+===== backend/runPipeline.js =====
+const fs = require("fs");
+const path = require("path");
+
+const { getStyleProfile } = require("./engines/styleProfiles");
+const { generateCharacter } = require("./engines/characterGenerator");
+const { generateVisuals } = require("./engines/visualGenerator");
+
+let smartShotDirector = null;
+let realMotionEngine = null;
+
+try {
+  smartShotDirector = require("./engines/smartShotDirector");
+} catch (error) {
+  console.warn("⚠️ Could not load smartShotDirector.js, using fallback shot director.");
+}
+
+try {
+  realMotionEngine = require("./engines/motionEngine");
+} catch (error) {
+  console.warn("⚠️ Could not load motionEngine.js, using fallback motion engine.");
+}
+
+function ensureDir(dirPath) {
+  fs.mkdirSync(dirPath, { recursive: true });
+}
+
+function buildMainCharacterProfile() {
+  return {
+    name: "Main Hero",
+    gender: "male",
+    age: "mid 30s",
+    ethnicity: "Middle Eastern",
+    hair: "short black hair, slightly messy",
+    face: "sharp jawline, thick eyebrows, deep-set eyes, straight nose",
+    beard: "short trimmed beard with light mustache",
+    body: "lean athletic build",
+    outfit: "dark robe style outfit, consistent clothing",
+    accessory: "none",
+    styleAnchor:
+      "same character, same face, same identity, same person, consistent outfit, consistent appearance",
+    identityLock:
+      "same exact person, identical face structure, identical beard, identical hairstyle, no variation",
+  };
+}
+
+function buildCharacterDescription(character, styleId) {
+  const base = [
+    character.gender,
+    character.age,
+    character.ethnicity,
+    character.hair,
+    character.face,
+    character.beard,
+    character.body,
+    character.outfit,
+    character.accessory,
+    character.styleAnchor,
+    character.identityLock,
+  ];
+
+  if (styleId === "lego") {
+    return "same toy brick character, same toy face, same toy outfit, same block character, no variation";
+  }
+
+  if (styleId === "anime") {
+    return `${base.join(", ")}, anime character design, anime face consistency`;
+  }
+
+  if (styleId === "disney" || styleId === "fantastic") {
+    return `${base.join(", ")}, stylized animated character, expressive face consistency`;
+  }
+
+  return base.join(", ");
+}
+
+async function sceneSplitter(story) {
+  console.log("🎬 Splitting story into scenes...");
+
+  if (!story || typeof story !== "string") {
+    return ["Scene 1"];
+  }
+
+  const rawScenes = story
+    .split(/[.!?]+/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  return rawScenes.length ? rawScenes : ["Scene 1"];
+}
+
+async function characterEngine(scenes) {
+  console.log("👤 Creating locked character profile...");
+
+  const mainCharacter = buildMainCharacterProfile();
+
+  return scenes.map((scene, index) => ({
+    id: index + 1,
+    text: scene,
+    mainCharacter,
+  }));
+}
+
+async function shotDirector(scenes, styleProfile) {
+  console.log("🎥 Adding cinematic direction...");
+
+  try {
+    if (typeof smartShotDirector === "function") {
+      const result = await smartShotDirector(scenes);
+      if (result) {
+        return result.map((scene) => ({
+          ...scene,
+          mainCharacter: scene.mainCharacter || scenes[0]?.mainCharacter,
+          visualProfile: styleProfile.visualProfile,
+          modelKey: styleProfile.modelKey,
+        }));
+      }
+    }
+
+    if (smartShotDirector && typeof smartShotDirector.run === "function") {
+      const result = await smartShotDirector.run(scenes);
+      if (result) {
+        return result.map((scene) => ({
+          ...scene,
+          mainCharacter: scene.mainCharacter || scenes[0]?.mainCharacter,
+          visualProfile: styleProfile.visualProfile,
+          modelKey: styleProfile.modelKey,
+        }));
+      }
+    }
+  } catch (error) {
+    console.warn("⚠️ smartShotDirector failed, using fallback:", error.message);
+  }
+
+  return scenes.map((scene, index) => {
+    let shot = "medium shot";
+    let cameraMove = "slow push-in";
+    let staging = "main character clearly visible, centered, front-facing";
+
+    if (index === 0) {
+      shot = "medium shot";
+      cameraMove = "slow push-in";
+      staging =
+        "main character standing near mysterious door, front-facing, full figure visible, face clearly visible, identity clear";
+    } else if (index === 1) {
+      shot = "close-up";
+      cameraMove = "slow push-in";
+      staging =
+        "main character reacting to glowing city, front-facing close-up, face clearly visible, emotional expression, identity clear";
+    } else if (index === 2) {
+      shot = "close-up portrait";
+      cameraMove = "slow push-in";
+      staging =
+        "main character close-up portrait, face clearly visible, same person, no silhouette, no back view";
+    }
+
+    return {
+      ...scene,
+      shot,
+      lighting: "cinematic dramatic lighting",
+      cameraMove,
+      staging,
+      mood: "mysterious, dramatic",
+      visualProfile: styleProfile.visualProfile,
+      modelKey: styleProfile.modelKey,
+    };
+  });
+}
+
+async function promptBuilder(directedScenes, styleProfile, characterImage) {
+  console.log(`🧠 Building prompts in style: ${styleProfile.label}...`);
+
+  return directedScenes.map((scene) => {
+    const character = scene.mainCharacter || buildMainCharacterProfile();
+    const characterDescription = buildCharacterDescription(character, styleProfile.id);
+
+    const promptParts = [
+      `scene: ${scene.text}`,
+      `MAIN SUBJECT: ${characterDescription}`,
+      "ONLY ONE CHARACTER IN FRAME",
+      "MAIN CHARACTER MUST BE VISIBLE",
+      "MAIN CHARACTER FACE MUST BE CLEARLY VISIBLE",
+      "DO NOT HIDE FACE",
+      "DO NOT SHOW BACK ONLY",
+      "NO SILHOUETTE",
+      "IDENTITY LOCK: same exact face, same bone structure, no variation across scenes",
+      "use same face as reference character image",
+      "use same identity as reference character image",
+      "same person across all scenes",
+      "same outfit across all scenes",
+      `environment: ${scene.staging}`,
+      `shot type: ${scene.shot}`,
+      `camera: ${scene.cameraMove}`,
+      `lighting: ${scene.lighting}`,
+      `mood: ${scene.mood}`,
+      `style: ${styleProfile.stylePrompt}`,
+      "cinematic composition",
+      "high detail",
+      "storytelling frame",
+      "vertical composition",
+    ];
+
+    return {
+      ...scene,
+      prompt: promptParts.join(", "),
+      negativePrompt: [
+        styleProfile.negativePrompt,
+        "multiple people",
+        "duplicate person",
+        "background characters",
+        "hidden face",
+        "face not visible",
+        "back facing only",
+        "silhouette only",
+        "different face",
+        "different person",
+        "identity change",
+        "identity drift",
+        "inconsistent outfit",
+        "low quality",
+        "blurry",
+        "bad anatomy",
+        "extra fingers",
+        "extra arms",
+        "extra legs",
+      ].join(", "),
+      characterImage,
+    };
+  });
+}
+
+async function generateImages(promptedScenes, styleProfile, lockedCharacter) {
+  console.log(`🖼 Generating ${styleProfile.label} images...`);
+
+  const imagePaths = await generateVisuals(promptedScenes, styleProfile, lockedCharacter);
+
+  return promptedScenes.map((scene, index) => ({
+    ...scene,
+    imagePath: imagePaths[index],
+  }));
+}
+
+async function motionEngine(imageScenes) {
+  if (typeof realMotionEngine === "function") {
+    return await realMotionEngine(imageScenes);
+  }
+
+  console.log("🎞 Applying fallback motion...");
+
+  return imageScenes.map((scene, index) => ({
+    ...scene,
+    clipPath: path.join(process.cwd(), "outputs", `clip_${index + 1}.mp4`),
+  }));
+}
+
+async function voiceEngine(directedScenes) {
+  console.log("🎤 Generating voice...");
+  return directedScenes.map((scene, index) => ({
+    ...scene,
+    voicePath: path.join("outputs", `voice_${index + 1}.wav`),
+  }));
+}
+
+async function subtitleEngine(voiceScenes) {
+  console.log("📝 Generating subtitles...");
+  return voiceScenes.map((scene, index) => ({
+    ...scene,
+    subtitlePath: path.join("outputs", `subtitle_${index + 1}.srt`),
+  }));
+}
+
+async function musicEngine(videoScenes) {
+  console.log("🎵 Adding music...");
+  return {
+    scenes: videoScenes,
+    musicPath: path.join("assets", "music", "background.mp3"),
+  };
+}
+
+async function reelComposer(finalData) {
+  console.log("🎬 Creating final video...");
+  return path.join("outputs", "final_video.mp4");
+}
+
+async function runPipeline(story, styleId = "realism") {
+  try {
+    const styleProfile = getStyleProfile(styleId);
+
+    console.log("🚀 Starting AutoReelFactory Pipeline...");
+    console.log(`🎨 Selected style: ${styleProfile.label}`);
+
+    const outputsDir = path.join(process.cwd(), "outputs");
+    ensureDir(outputsDir);
+
+    const characterImage = await generateCharacter(styleProfile);
+    const scenes = await sceneSplitter(story);
+    const characters = await characterEngine(scenes);
+    const directedScenes = await shotDirector(characters, styleProfile);
+    const promptedScenes = await promptBuilder(
+      directedScenes,
+      styleProfile,
+      characterImage
+    );
+
+    const imageScenes = await generateImages(
+      promptedScenes,
+      styleProfile,
+      characterImage
+    );
+
+    const motionScenes = await motionEngine(imageScenes);
+    const voiceScenes = await voiceEngine(directedScenes);
+    const subtitleScenes = await subtitleEngine(voiceScenes);
+    const musicData = await musicEngine(motionScenes);
+    const finalVideo = await reelComposer(musicData);
+
+    console.log("✅ DONE:", finalVideo);
+    return finalVideo;
+  } catch (error) {
+    console.error("❌ Pipeline failed:", error.message);
+    throw error;
+  }
+}
+
+runPipeline(
+  "A man lost in the desert finds a mysterious door. He opens it and sees a glowing city. He walks forward in shock.",
+  "realism"
+);
+
+===== ai/generate_image.py =====
+import sys
+import os
+import torch
+from diffusers import StableDiffusionPipeline
+
+# -----------------------------
+# INPUTS
+# -----------------------------
+prompt = sys.argv[1] if len(sys.argv) > 1 else "portrait of a middle eastern man"
+output_path = sys.argv[2] if len(sys.argv) > 2 else "outputs/scene.png"
+
+# -----------------------------
+# FIX BAD OUTPUT PATHS
+# -----------------------------
+output_path = output_path.replace(".json", "")
+if not output_path.endswith(".png"):
+    output_path += ".png"
+
+# -----------------------------
+# DEVICE
+# -----------------------------
+device = "mps" if torch.backends.mps.is_available() else "cpu"
+
+# -----------------------------
+# MODEL
+# -----------------------------
+pipe = StableDiffusionPipeline.from_pretrained(
+    "runwayml/stable-diffusion-v1-5",
+    torch_dtype=torch.float32
+)
+pipe = pipe.to(device)
+
+# -----------------------------
+# GENERATE
+# -----------------------------
+image = pipe(
+    prompt=prompt,
+    num_inference_steps=30,
+    guidance_scale=7.5
+).images[0]
+
+# -----------------------------
+# SAVE
+# -----------------------------
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+image.save(output_path)
+
+print(f"✅ Saved image: {output_path}")
+sys.exit(0)
+
+===== backend/engines/visualGenerator.js =====
+const fs = require("fs");
+const path = require("path");
+const { spawn } = require("child_process");
+
+function runPythonGenerate(prompt, outputPath) {
+  return new Promise((resolve, reject) => {
+    const pythonPath =
+      process.env.PYTHON_PATH ||
+      path.join(process.cwd(), "ai-env", "bin", "python");
+
+    const py = spawn(
+      pythonPath,
+      ["ai/generate_image.py", prompt, outputPath],
+      { cwd: process.cwd() }
+    );
+
+    let stdout = "";
+    let stderr = "";
+
+    py.stdout.on("data", (data) => {
+      const text = data.toString();
+      stdout += text;
+      process.stdout.write(text);
+    });
+
+    py.stderr.on("data", (data) => {
+      const text = data.toString();
+      stderr += text;
+      process.stderr.write(text);
+    });
+
+    py.on("close", (code) => {
+      if (code === 0) {
+        resolve({ stdout, stderr, outputPath });
+      } else {
+        reject(new Error(stderr || stdout || "Image generation failed"));
+      }
+    });
+  });
+}
+
+function buildScenePrompt(scene, styleProfile, lockedCharacter) {
+  const styleName =
+    typeof styleProfile === "string"
+      ? styleProfile
+      : styleProfile?.name || "Realism";
+
+  const mainCharacter =
+    "middle eastern man, 30 years old, sharp jawline, thick dark eyebrows, short black hair, trimmed beard";
+
+  const text = (scene?.text || "").toLowerCase();
+
+  let sceneDescription = "close portrait of a serious man";
+  let shot = "medium shot";
+  let environment = "neutral cinematic background";
+  let lighting = "cinematic soft lighting";
+
+  if (text.includes("desert") && text.includes("door")) {
+    sceneDescription =
+      "a middle eastern man lost in the desert standing near a mysterious ancient door carved into stone";
+    shot = "medium full-body shot";
+    environment = "desert ruins, sand, ancient stone doorway";
+    lighting = "golden hour cinematic lighting";
+  } else if (text.includes("glowing city")) {
+    sceneDescription =
+      "a middle eastern man staring in shock at a glowing futuristic city beyond a doorway";
+    shot = "close-up shot";
+    environment = "bright glowing futuristic city in the distance";
+    lighting = "dramatic cinematic lighting with glow on face";
+  } else if (text.includes("walks forward") || text.includes("shock")) {
+    sceneDescription =
+      "a middle eastern man walking forward carefully with a shocked expression";
+    shot = "medium shot";
+    environment = "mysterious passage leading toward a glowing city";
+    lighting = "dramatic cinematic rim lighting";
+  }
+
+  return [
+    `${styleName} realistic photography`,
+    mainCharacter,
+    sceneDescription,
+    shot,
+    environment,
+    lighting,
+    "same man in every scene",
+    "natural skin texture",
+    "realistic eyes",
+    "realistic nose",
+    "realistic face proportions",
+    "one person only",
+    "high quality portrait photography",
+    "vertical 9:16 composition"
+  ].join(", ");
+}
+
+async function generateVisuals(scenes, styleProfile, lockedCharacter) {
+  const outputsDir = path.join(process.cwd(), "outputs");
+  fs.mkdirSync(outputsDir, { recursive: true });
+
+  const imagePaths = [];
+
+  for (let i = 0; i < scenes.length; i++) {
+    const scene = scenes[i];
+    const sceneNumber = i + 1;
+    const outputPath = path.join(outputsDir, `scene_${sceneNumber}.png`);
+    const prompt = buildScenePrompt(scene, styleProfile, lockedCharacter);
+
+    console.log(`🖼 Generating scene ${sceneNumber}...`);
+    console.log(`Prompt: ${prompt}`);
+
+    await runPythonGenerate(prompt, outputPath);
+
+    if (!fs.existsSync(outputPath)) {
+      throw new Error(`Scene image was not created: ${outputPath}`);
+    }
+
+    imagePaths.push(outputPath);
+  }
+
+  return imagePaths;
+}
+
+module.exports = { generateVisuals };
+
+===== backend/engines/characterGenerator.js =====
+const fs = require("fs");
+const path = require("path");
+const { spawn } = require("child_process");
+
+async function generateCharacter(styleProfile) {
+  console.log("🧬 Generating master character...");
+
+  const outputsDir = path.join(process.cwd(), "outputs");
+  fs.mkdirSync(outputsDir, { recursive: true });
+
+  const outputPath = path.join(outputsDir, "character.png");
+  const manifestPath = path.join(outputsDir, "character_manifest.json");
+
+  const prompt = "male portrait, mid 30s, middle eastern, short black hair, trimmed beard, cinematic, photorealistic";
+
+  const manifest = {
+    shots: [
+      {
+        prompt,
+        negative: "blurry, low quality, deformed face",
+        output: outputPath,
+        seed: 1234,
+        steps: 20,
+        guidance: 7.5
+      }
+    ]
+  };
+
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf8");
+
+  return new Promise((resolve, reject) => {
+    const py = spawn(path.join(process.cwd(), "ai-env", "bin", "python"), [
+      "ai/generate_image.py",
+      "--manifest",
+      manifestPath
+    ], {
+      cwd: process.cwd()
+    });
+
+    let stderr = "";
+
+    py.stdout.on("data", (data) => {
+      process.stdout.write(data.toString());
+    });
+
+    py.stderr.on("data", (data) => {
+      const text = data.toString();
+      stderr += text;
+      process.stderr.write(text);
+    });
+
+    py.on("close", (code) => {
+      if (code === 0) {
+        resolve(outputPath);
+      } else {
+        reject(new Error(stderr || "Character generation failed"));
+      }
+    });
+  });
+}
+
+module.exports = { generateCharacter };
+
+===== backend/engines/motionEngine.js =====
+const fs = require("fs");
+const path = require("path");
+const { execFile } = require("child_process");
+
+function ensureDir(dirPath) {
+  fs.mkdirSync(dirPath, { recursive: true });
+}
+
+function runCommand(command, args = []) {
+  return new Promise((resolve, reject) => {
+    execFile(command, args, { maxBuffer: 1024 * 1024 * 20 }, (error, stdout, stderr) => {
+      if (error) {
+        reject(new Error(stderr || error.message));
+        return;
+      }
+      resolve({ stdout, stderr });
+    });
+  });
+}
+
+async function createClipFromImage(imagePath, clipPath, options = {}) {
+  const duration = Number(options.duration || 3);
+  const fps = Number(options.fps || 30);
+
+  ensureDir(path.dirname(clipPath));
+
+  const totalFrames = duration * fps;
+
+  const zoomExpr = `zoompan=z='min(zoom+0.0008,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=${totalFrames}:s=576x1024:fps=${fps}`;
+
+  const filter = [
+    "scale=576:1024:force_original_aspect_ratio=increase",
+    "crop=576:1024",
+    zoomExpr,
+    "format=yuv420p"
+  ].join(",");
+
+  await runCommand("ffmpeg", [
+    "-y",
+    "-loop", "1",
+    "-i", imagePath,
+    "-vf", filter,
+    "-t", String(duration),
+    "-r", String(fps),
+    "-pix_fmt", "yuv420p",
+    clipPath
+  ]);
+
+  return clipPath;
+}
+
+async function motionEngine(imageScenes) {
+  console.log("🎞 Applying real motion with FFmpeg...");
+
+  const clips = [];
+
+  for (let i = 0; i < imageScenes.length; i += 1) {
+    const scene = imageScenes[i];
+    const clipPath = path.join(process.cwd(), "outputs", `clip_${i + 1}.mp4`);
+
+    console.log(`🎬 Creating clip ${i + 1} from ${scene.imagePath}...`);
+
+    await createClipFromImage(scene.imagePath, clipPath, {
+      duration: 3,
+      fps: 30,
+    });
+
+    clips.push({
+      ...scene,
+      clipPath,
+    });
+  }
+
+  return clips;
+}
+
+module.exports = motionEngine;
+
+===== backend/engines/styleProfiles.js =====
+const STYLE_PROFILES = {
+  realism: {
+    id: "realism",
+    label: "Realism",
+    modelKey: "realvis-xl",
+    visualProfile: "realistic",
+    stylePrompt:
+      "photorealistic, cinematic, realistic skin, natural lighting, film still, realistic textures, realistic depth",
+    negativePrompt:
+      "cartoon, anime, illustration, painting, lego, toy, low quality, blurry, deformed face, extra fingers, watermark, logo, text",
+  },
+
+  comic: {
+    id: "comic",
+    label: "Comic",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "comic book art, graphic novel style, bold outlines, dramatic shading, illustrated panel, stylized storytelling",
+    negativePrompt:
+      "photorealistic, real photo, low quality, blurry, deformed face, watermark, logo, text",
+  },
+
+  creepy_comic: {
+    id: "creepy_comic",
+    label: "Creepy Comic",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "creepy comic art, horror graphic novel, eerie shadows, unsettling mood, dark illustrated panel, spooky cinematic comic scene",
+    negativePrompt:
+      "cute, cheerful, photorealistic, real photo, low quality, blurry, watermark, logo, text",
+  },
+
+  modern_cartoon: {
+    id: "modern_cartoon",
+    label: "Modern Cartoon",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "modern cartoon style, clean stylized characters, expressive face, polished animated illustration, vibrant contemporary cartoon look",
+    negativePrompt:
+      "photorealistic, real photo, gritty realism, low quality, blurry, watermark, logo, text",
+  },
+
+  disney: {
+    id: "disney",
+    label: "Disney-like",
+    modelKey: "pixart-sigma",
+    visualProfile: "pixar",
+    stylePrompt:
+      "family animated film style, soft 3d animated character, expressive eyes, warm cinematic lighting, charming stylized world, premium animated movie look",
+    negativePrompt:
+      "photorealistic, horror, gritty realism, low quality, blurry, watermark, logo, text",
+  },
+
+  ghibli: {
+    id: "ghibli",
+    label: "Ghibli-like",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "hand-painted fantasy animation feel, gentle whimsical environment, soft natural colors, storybook atmosphere, dreamy cinematic illustration",
+    negativePrompt:
+      "photorealistic, hyperrealism, harsh modern lighting, low quality, blurry, watermark, logo, text",
+  },
+
+  anime: {
+    id: "anime",
+    label: "Anime",
+    modelKey: "animagine-xl",
+    visualProfile: "anime",
+    stylePrompt:
+      "anime key visual, detailed anime character, cinematic anime lighting, dramatic composition, polished anime artwork",
+    negativePrompt:
+      "photorealistic, real photo, western comic, low quality, blurry, watermark, logo, text",
+  },
+
+  painting: {
+    id: "painting",
+    label: "Painting",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "digital painting, painterly brush strokes, rich textures, artistic composition, dramatic painted scene, gallery-quality concept art",
+    negativePrompt:
+      "photorealistic, real photo, low quality, blurry, watermark, logo, text",
+  },
+
+  dark_fantasy: {
+    id: "dark_fantasy",
+    label: "Dark Fantasy",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "dark fantasy artwork, gothic atmosphere, moody dramatic lighting, epic mystical world, ominous cinematic fantasy scene",
+    negativePrompt:
+      "bright cheerful cartoon, photorealistic modern city, low quality, blurry, watermark, logo, text",
+  },
+
+  lego: {
+    id: "lego",
+    label: "Lego-like",
+    modelKey: "dreamshaper-xl",
+    visualProfile: "cartoon",
+    stylePrompt:
+      "toy brick world, blocky toy character, miniature plastic scene, playful cinematic toy style, detailed brick-built environment",
+    negativePrompt:
+      "photorealistic human skin, realistic face, low quality, blurry, watermark, logo, text",
+  },
+
+  fantastic: {
+    id: "fantastic",
+    label: "Fantastic",
+    modelKey: "pixart-sigma",
+    visualProfile: "pixar",
+    stylePrompt:
+      "fantastical cinematic world, magical atmosphere, epic light rays, imaginative environment, wonder-filled fantasy adventure frame",
+    negativePrompt:
+      "dull realism, low quality, blurry, watermark, logo, text",
+  },
+};
+
+function getStyleProfile(styleId = "realism") {
+  const key = String(styleId || "realism").trim().toLowerCase();
+  return STYLE_PROFILES[key] || STYLE_PROFILES.realism;
+}
+
+module.exports = {
+  STYLE_PROFILES,
+  getStyleProfile,
+};
+
+===== backend/engines/smartShotDirector.js =====
+module.exports = async function smartShotDirector(scenes) {
+  return scenes.map((scene, index) => {
+    let shot = "medium shot";
+    let cameraMove = "slow push-in";
+    let staging = "main character clearly visible, centered, front-facing";
+    let mood = "cinematic dramatic";
+    let lighting = "cinematic golden dramatic lighting";
+
+    if (index === 0) {
+      shot = "medium shot";
+      cameraMove = "slow push-in";
+      staging =
+        "main character standing near mysterious door, front-facing, full figure visible, face clearly visible, identity clear";
+    }
+
+    if (index === 1) {
+      shot = "close-up";
+      cameraMove = "slow push-in";
+      staging =
+        "main character reacting to glowing city, front-facing close-up, face clearly visible, emotional expression, identity clear";
+    }
+
+    if (index === 2) {
+      shot = "close-up portrait";
+      cameraMove = "slow push-in";
+      staging =
+        "main character close-up portrait, face clearly visible, same person, no silhouette, no back view";
+    }
+
+    return {
+      ...scene,
+      shot,
+      cameraMove,
+      staging,
+      mood,
+      lighting,
+    };
+  });
+};
+
+===== ai/face_swap.py =====
+import sys
+import os
+from pathlib import Path
+import urllib.request
+
+import cv2
+from insightface.app import FaceAnalysis
+from insightface.model_zoo import get_model
+
+# -----------------------------
+# INPUTS
+# -----------------------------
+source_path = sys.argv[1]   # character image
+target_path = sys.argv[2]   # generated scene image
+output_path = sys.argv[3]   # final image
+
+# -----------------------------
+# HELPERS
+# -----------------------------
+def ensure_parent_dir(file_path: str):
+    Path(file_path).parent.mkdir(parents=True, exist_ok=True)
+
+def ensure_inswapper_model() -> str:
+    """
+    Make sure inswapper_128.onnx exists locally and return its absolute path.
+    """
+    models_dir = Path.home() / ".insightface" / "models"
+    models_dir.mkdir(parents=True, exist_ok=True)
+
+    model_path = models_dir / "inswapper_128.onnx"
+
+    if model_path.exists() and model_path.stat().st_size > 10_000_000:
+        print(f"Using local swapper model: {model_path}")
+        return str(model_path)
+
+    url = "https://github.com/deepinsight/insightface/releases/download/v0.7/inswapper_128.onnx"
+    print(f"Downloading face swap model to: {model_path}")
+    urllib.request.urlretrieve(url, model_path)
+
+    if not model_path.exists() or model_path.stat().st_size < 10_000_000:
+        raise RuntimeError("Failed to download a valid inswapper_128.onnx model")
+
+    print(f"Downloaded swapper model: {model_path}")
+    return str(model_path)
+
+# -----------------------------
+# PREP PATHS
+# -----------------------------
+source_path = os.path.abspath(source_path)
+target_path = os.path.abspath(target_path)
+output_path = os.path.abspath(output_path)
+
+ensure_parent_dir(output_path)
+
+# -----------------------------
+# LOAD IMAGES
+# -----------------------------
+source_img = cv2.imread(source_path)
+target_img = cv2.imread(target_path)
+
+if source_img is None:
+    raise RuntimeError(f"Could not read source image: {source_path}")
+
+if target_img is None:
+    raise RuntimeError(f"Could not read target image: {target_path}")
+
+# -----------------------------
+# LOAD FACE ANALYSIS
+# -----------------------------
+providers = ["CPUExecutionProvider"]
+
+print("Loading FaceAnalysis...")
+app = FaceAnalysis(name="buffalo_l", providers=providers)
+app.prepare(ctx_id=0, det_size=(640, 640))
+
+# -----------------------------
+# LOAD SWAPPER MODEL
+# -----------------------------
+swapper_model_path = ensure_inswapper_model()
+
+print("Loading face swapper model...")
+swapper = get_model(swapper_model_path, providers=providers)
+
+# -----------------------------
+# DETECT FACES
+# -----------------------------
+print("Detecting faces...")
+source_faces = app.get(source_img)
+target_faces = app.get(target_img)
+
+if len(source_faces) == 0:
+    print("No face found in source image. Saving original target.")
+    cv2.imwrite(output_path, target_img)
+    sys.exit(0)
+
+if len(target_faces) == 0:
+    print("No face found in target image. Saving original target.")
+    cv2.imwrite(output_path, target_img)
+    sys.exit(0)
+
+source_face = source_faces[0]
+
+# -----------------------------
+# SWAP
+# -----------------------------
+print(f"Swapping onto {len(target_faces)} face(s)...")
+result = target_img.copy()
+
+for face in target_faces:
+    result = swapper.get(result, face, source_face, paste_back=True)
+
+# -----------------------------
+# SAVE
+# -----------------------------
+cv2.imwrite(output_path, result)
+print(f"✅ Face swapped saved: {output_path}")
+sys.exit(0)

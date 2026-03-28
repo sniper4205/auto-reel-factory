@@ -1,0 +1,22 @@
+[
+  {
+    "scene_number": 1,
+    "prompt": "same exact person from reference image, identical face, identical facial structure, identical beard, identical hairstyle, do not change identity, same outfit, same jacket, same colors, face consistency, identity consistency, highly detailed face\n,\n\nsitting alone on a rooftop at sunset, looking at city skyline, serious expression, wind blowing softly,\n\nLong shot, Introspective mood,\n\n\nultra realistic, 8k, film look, color graded, shallow depth of field, sharp focus, professional photography, cinematic lighting, masterpiece, best quality, 9:16 vertical"
+  },
+  {
+    "scene_number": 2,
+    "prompt": "same exact person from reference image, identical face, identical facial structure, identical beard, identical hairstyle, do not change identity, same outfit, same jacket, same colors, face consistency, identity consistency, highly detailed face\n,\n\nwalking forward on a city street at night, determined expression, moving with purpose,\n\nMedium shot, Anticipation mood,\n\n\nultra realistic, 8k, film look, color graded, shallow depth of field, sharp focus, professional photography, cinematic lighting, masterpiece, best quality, 9:16 vertical"
+  },
+  {
+    "scene_number": 3,
+    "prompt": "same exact person from reference image, identical face, identical facial structure, identical beard, identical hairstyle, do not change identity, same outfit, same jacket, same colors, face consistency, identity consistency, highly detailed face\n,\n\nstanding in heavy rain at night, wet face, emotional struggle, blurred city lights in background,\n\nClose-up, Tense mood,\n\n\nultra realistic, 8k, film look, color graded, shallow depth of field, sharp focus, professional photography, cinematic lighting, masterpiece, best quality, 9:16 vertical"
+  },
+  {
+    "scene_number": 4,
+    "prompt": "same exact person from reference image, identical face, identical facial structure, identical beard, identical hairstyle, do not change identity, same outfit, same jacket, same colors, face consistency, identity consistency, highly detailed face\n,\n\nDespite the setbacks, the young man persists. A gym or training ground setting shows him pushing himself harder than ever, the mood inspiring and uplifting.,\n\nEstablishing shot, Inspiring mood,\n\n\nultra realistic, 8k, film look, color graded, shallow depth of field, sharp focus, professional photography, cinematic lighting, masterpiece, best quality, 9:16 vertical"
+  },
+  {
+    "scene_number": 5,
+    "prompt": "same exact person from reference image, identical face, identical facial structure, identical beard, identical hairstyle, do not change identity, same outfit, same jacket, same colors, face consistency, identity consistency, highly detailed face\n,\n\nsitting alone on a rooftop at sunset, looking at city skyline, serious expression, wind blowing softly,\n\nWide shot, Victorious mood,\n\n\nultra realistic, 8k, film look, color graded, shallow depth of field, sharp focus, professional photography, cinematic lighting, masterpiece, best quality, 9:16 vertical"
+  }
+]

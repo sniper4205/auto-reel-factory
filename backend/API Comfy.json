@@ -1,0 +1,217 @@
+{
+  "2": {
+    "inputs": {
+      "text": "blurry, low quality, worst quality, distorted face, different person, different face, different hairstyle, different beard, changing identity, deformed, bad anatomy, extra fingers, extra limbs, duplicate face, unrealistic skin, cartoon, anime, CGI, watermark, text, logo",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": "same exact person from reference image, identical face, identical facial structure, identical beard, identical hairstyle, do not change identity, same outfit, same jacket, same colors, face consistency, identity consistency, highly detailed face,\n\nstanding confidently in a luxury modern penthouse at night, overlooking city skyline with bright lights, calm powerful expression, looking forward, success vibe, clean environment,\n\nwide cinematic shot, high contrast lighting, cinematic glow, premium atmosphere,\n\nultra realistic, 8k, film look, color graded, shallow depth of field, sharp focus, professional photography, masterpiece, best quality, 9:16 vertical",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "seed": 112866809216621,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "13",
+        0
+      ],
+      "positive": [
+        "17",
+        0
+      ],
+      "negative": [
+        "17",
+        1
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "20",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "scene",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": 768,
+      "height": 1344,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "9": {
+    "inputs": {
+      "image": "ComfyUI_00005_.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "13": {
+    "inputs": {
+      "weight": 0.95,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "20",
+        0
+      ],
+      "ipadapter": [
+        "14",
+        0
+      ],
+      "image": [
+        "9",
+        0
+      ],
+      "clip_vision": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "IPAdapterAdvanced",
+    "_meta": {
+      "title": "IPAdapter Advanced"
+    }
+  },
+  "14": {
+    "inputs": {
+      "ipadapter_file": "ip-adapter-plus-face_sd15.safetensors"
+    },
+    "class_type": "IPAdapterModelLoader",
+    "_meta": {
+      "title": "IPAdapter Model Loader"
+    }
+  },
+  "16": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 512,
+      "scale_stick_for_xinsr_cn": "disable",
+      "image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "OpenposePreprocessor",
+    "_meta": {
+      "title": "OpenPose Pose"
+    }
+  },
+  "17": {
+    "inputs": {
+      "strength": 1,
+      "start_percent": 0,
+      "end_percent": 1,
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "2",
+        0
+      ],
+      "control_net": [
+        "18",
+        0
+      ],
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "18": {
+    "inputs": {
+      "control_net_name": "controlnet-openpose-sdxl-1.0.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "20": {
+    "inputs": {
+      "ckpt_name": "juggernautXL.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "21": {
+    "inputs": {
+      "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  }
+}
