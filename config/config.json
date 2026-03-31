@@ -1,0 +1,6 @@
+{
+  "default_voice": "en",
+  "default_style": "realistic",
+  "default_resolution": "1080x1920",
+  "music_file": "background_music.mp3"
+}

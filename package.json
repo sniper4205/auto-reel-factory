@@ -1,11 +1,39 @@
 {
   "name": "auto-reel-factory",
   "version": "1.0.0",
+  "description": "Offline AI Content Studio for viral-quality video generation",
   "main": "electron/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "dependencies": {
+    "axios": "^1.14.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "electron": "^37.2.0"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.auto.reel.factory",
+    "productName": "Auto Reel Factory",
+    "directories": {
+      "output": "dist",
+      "buildResources": "resources"
+    },
+    "files": [
+      "**/*",
+      "!dist",
+      "!ai/venv/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.video"
+    },
+    "artifactName": "AutoReelFactory.dmg"
   }
 }
